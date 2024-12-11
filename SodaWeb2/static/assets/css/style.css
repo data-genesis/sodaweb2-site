@@ -1,0 +1,39 @@
+/* Общие стили */
+
+@font-face {
+    font-family: "Source Code Pro", monospace;
+
+}
+body {
+    font-family: "Source Code Pro", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #c5c5c5
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .inner {
+        padding: 10px;
+    }
+}

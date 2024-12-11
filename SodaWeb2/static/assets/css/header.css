@@ -1,0 +1,68 @@
+/* Стили для хэдера */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#header .logo {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo .symbol img {
+    height: 4em;
+    width: 4em;
+}
+
+#header .title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 20px;
+    font-family: "Source Code Pro", monospace;
+}
+
+#header .cart {
+    display: flex;
+    align-items: center;
+
+}
+
+#header .cart img {
+    height: 2em;
+    width: 2em;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #header .inner {
+        padding: 10px;
+    }
+
+    #header .logo .symbol img {
+        height: 30px;
+    }
+
+    #header .title {
+        font-size: 1.2em;
+        margin: 0 10px;
+    }
+
+    #header .cart img {
+        height: 30px;
+    }
+}
