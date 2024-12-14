@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df6edeee-477e-49ee-b4ab-74a8c02138b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sodaweb2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SodaWeb2/static/assets/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SodaWeb2/static/assets/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SodaWeb2/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SodaWeb2/static/assets/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/SodaWeb2/static/assets/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SodaWeb2/static/assets/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/SodaWeb2/static/assets/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SodaWeb2/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/SodaWeb2/static/assets/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2px9FGyfFwxw0dOfgD3njJFtFBj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -42,15 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\oracle\Documents\sodaweb2\SodaWeb2\apps" />
+      <recent name="C:\Users\oracle\Documents\sodaweb2\apps" />
       <recent name="C:\Users\oracle\Documents\sodaweb2\SodaWeb2" />
       <recent name="C:\Users\oracle\Documents\sodaweb2\SodaWeb2\static\assets\images" />
     </key>
@@ -72,5 +69,16 @@
       <updated>1733696753901</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SodaWeb2/apps/cart/migrations/0002_remove_cartitem_cart_alter_cartitem_options_and_more.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,21 +1,28 @@
 /* Общие стили */
 
 @font-face {
-    font-family: "Source Code Pro", monospace;
-
+    font-family: 'Source Code Pro';
+    src: url('/static/assets/fonts/SourceCodePro-ExtraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
+
 body {
     font-family: "Source Code Pro", monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 #wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #c5c5c5
+    background-color: #c5c5c5;
 }
 
 #main {
@@ -23,12 +30,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px 0;
 }
 
 .inner {
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 /* Адаптивность */

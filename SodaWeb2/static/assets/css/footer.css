@@ -1,11 +1,11 @@
 /* Стили для футера */
 #footer {
-    position: fixed;
+    font-family: "Source Code Pro", monospace;
+    position: absolute; /* Используем absolute вместо fixed */
     bottom: 0;
     width: 100%;
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
 }
 
 #footer .inner {
@@ -19,11 +19,23 @@
     margin: 0 auto;
 }
 
-#footer p {
+#footer p, a {
     margin: 0;
     font-size: 0.9em;
-    color: #555;
+    color: black;
+    text-decoration: none;
 }
+#footer a:hover {
+    margin: 0;
+    color: green; /* Цвет при наведении курсора, если хотите, чтобы он не менялся */
+    text-decoration: none; /* Можно добавить подчеркивание только при наведении */
+}
+
+#footer .fab {
+    font-size: 1em; /* Установите размер иконки */
+    color: black; /* Цвет иконки */
+}
+
 
 /* Адаптивность */
 @media (max-width: 768px) {
