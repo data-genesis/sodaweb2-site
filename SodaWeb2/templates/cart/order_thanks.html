@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/order_thanks.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="thanks-container">
+    <h2>Спасибо за ваш заказ!</h2>
+    <p>Ваш номер заказа: {{ order_number }}</p>
+    <a href="{% url 'store:home' %}" class="button">Вернуться к покупкам</a>
+</div>
+{% endblock %}
+

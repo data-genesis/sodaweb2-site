@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+    <title>soda.ci</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="{% static "assets/images/logo_soda.ico" %}" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static "assets/css/style.css"%}" />
+    <link rel="stylesheet" href="{% static "assets/css/header.css"%}" />
+    <link rel="stylesheet" href="{% static "assets/css/footer.css"%}" />
+    <link rel="stylesheet" href="{% static "assets/css/main_page.css"%}" />
+    {% block css %}
+
+    {% endblock %}
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+            {% include 'includes/header.html' %}
+        <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        <!-- Footer -->
+            {% include 'includes/footer.html' %}
+    </div>
+<!-- Scripts -->
+
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

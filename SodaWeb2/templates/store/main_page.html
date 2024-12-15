@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/main_page.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/css/photo_grid.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+    <div class="full-width-image">
+        <img src="{% static 'assets/images/hero.png' %}">
+    </div>
+    <h2>STORE</h2>
+    <div class="product-grid">
+        {% for item in items %}
+        <div class="product-item">
+            <a href="{% url 'store:item_details' item.slug %}">
+                {% if item.photos.exists %}
+                    <img src="{{ item.photos.first.image.url }}" alt="{{ item.title }}">
+                {% else %}
+                    <img src="{% static 'assets/images/default.jpg' %}" alt="{{ item.title }}">
+                {% endif %}
+                <p>{{ item.title }}</p>
+                <p>{{ item.price }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

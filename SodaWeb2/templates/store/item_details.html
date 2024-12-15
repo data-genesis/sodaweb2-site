@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block js %}
+<script>
+    const CREATE_ORDER_URL = '{% url "cart:create_order" %}';
+</script>
+<script src="{% static 'js/cart.js' %}"></script>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/item_details.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="item-grid-container">
+    <div class="item-grid">
+        <div class="item-images">
+            {% for photo in photos %}
+                <img src="{{ photo.image.url }}" alt="{{ item.title }}"/>
+            {% empty %}
+                <p>Нет изображений для этого товара</p>
+            {% endfor %}
+        </div>
+        <div class="item-description" style="background-color: black; color: #0baf01;">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.description|safe }}</p>
+            {% if item.old_price %}
+                <p>Старая цена: <s>{{ item.old_price }} рублей</s></p>
+                <p>Новая цена: <b>{{ item.price }}</b> рублей </p>
+            {% else %}
+                <p>Цена: <b>{{ item.price }}</b> рублей </p>
+            {% endif %}
+            <button onclick="addToCart(event, '{{ item.slug }}')" class="button small">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

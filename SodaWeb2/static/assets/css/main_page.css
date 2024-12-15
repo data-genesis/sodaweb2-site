@@ -1,0 +1,95 @@
+/* Стили для главной страницы */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #fff; /* Цвет текста для контраста с фоном */
+
+}
+
+.content-wrapper h1 {
+    color: black;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+.content-wrapper h2 {
+    font-family: TITLE;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.full-width-image {
+    width: 100vw; /* Используем vw для полной ширины экрана */
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Убедимся, что изображение заполняет контейнер */
+}
+
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование сетки */
+    width: 100%;
+}
+
+.product-grid {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: grid;
+    padding: 3em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+}
+
+.product-item {
+    font-family: "Source Code Pro", monospace;
+    background-color: black; /* Полупрозрачный фон для карточек */
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item p {
+    margin: 10px;
+    font-size: 18px;
+    color: #0baf01;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,63 @@
+/* Убедимся, что header и footer остаются на своих местах */
+
+/* Убедимся, что контент формы центрируется по центру страницы */
+.order-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Вычитаем высоту header и footer */
+    padding: 0 20px;
+}
+
+/* Стили для формы */
+#order-form {
+    background-color: black;
+    color: #0baf01; /* Зеленый акцентный цвет */
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /* Максимальная ширина формы */
+}
+
+/* Стили для элементов формы */
+#order-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0baf01;
+}
+
+#order-form input, #order-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-family: DEFAULT;
+
+}
+
+#order-form input {
+    background: #000000; /* Темный фон для инпутов */
+    color: #0baf01;
+}
+
+#order-form button {
+    background-color: #0baf01;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-family: BOLD;
+}
+
+#order-form button:hover {
+    background-color: #000000; /* Темнее при наведении */
+    color: #0baf01;
+}
+
+/* Стили для сообщений об ошибках (если они есть) */
+#order-form .errorlist {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}

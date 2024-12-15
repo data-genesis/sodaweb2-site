@@ -1,0 +1,100 @@
+/* Контейнер для всей страницы корзины */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Черные блоки */
+.black-block {
+    background-color: #000; /* Черный фон */
+    color: #0baf01; /* Белый текст */
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Список товаров в корзине */
+.cart-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(11, 175, 1, 0.6);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-quantity {
+    color: #ccc;
+}
+
+/* Кнопка удаления */
+.delete-button {
+    color: #ff4136; /* Красный цвет для кнопки удаления */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.delete-button:hover {
+    color: #ff725c;
+}
+
+/* Блок с итоговой стоимостью */
+.checkout-summary {
+    color: #0baf01;
+    text-align: center;
+}
+
+/* Контейнер для кнопки оформления заказа */
+.order-button-container {
+    text-align: center;
+}
+
+/* Стили для кнопки */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    color: black;
+    background-color: #0baf01; /* Зеленый */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #088c01; /* Темнее при наведении */
+}
+
+.button.primary {
+    margin-top: 20px;
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/cart.css' %}" />
+{% endblock %}
+
+{% block js %}
+<script>
+    const BASE_URL = window.location.origin; // Получаем базовый URL сайта
+    const DELETE_CART_ITEM_PATH = '{% url "cart:delete_cart_item" item_id="0" %}'.replace(/^\/cart\/delete\/\d+\/$/, '/cart/delete/');
+</script>
+<script src="{% static 'js/cart.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="cart-container">
+    <div class="cart-list black-block">
+        <h2>КОРЗИНА</h2>
+        {% if cart_items %}
+            {% for item in cart_items %}
+            <div class="cart-item" data-item-id="{{ item.id }}">
+                {% if item.item.photos.exists %}
+                    <img src="{{ item.item.photos.first.image.url }}" alt="{{ item.item.title }}" class="item-thumbnail">
+                {% else %}
+                    <img src="{% static 'assets/images/default.jpg' %}" alt="{{ item.item.title }}" class="item-thumbnail">
+                {% endif %}
+                <div class="item-details">
+                    <span class="item-title">{{ item.item.title }}</span>
+                    <span class="item-quantity">Количество: {{ item.quantity }}</span>
+                </div>
+                <a href="#" onclick="event.preventDefault(); decreaseCartItem('{{ item.id }}');" class="decrease-button">-</a>
+            <a href="#" onclick="event.preventDefault(); removeCartItem('{{ item.id }}');" class="delete-button">Удалить</a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Ваша корзина пуста.</p>
+        {% endif %}
+    </div>
+
+    {% if cart_items %}
+        <div class="checkout-summary black-block">
+            <h3>Итоговая стоимость: {{ total_price }}</h3>
+        </div>
+
+        <div class="order-button-container">
+            <a href="{% url 'orders:order_form' %}" class="button primary">Оформить заказ</a>
+        </div>
+    {% endif %}
+
+    <div id="order-form-container" style="display:none;">
+        {% include 'cart/orders.html' %}
+    </div>
+</div>
+{% endblock %}

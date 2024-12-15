@@ -1,0 +1,17 @@
+{% load static %}
+<header id="header">
+    <div class="header-content">
+        <!-- Logo -->
+        <a href="{% url 'store:home' %}" class="logo">
+            <span class="symbol"><img src="{% static "assets/images/logo_soda1.svg" %}" alt="Logo" /></span>
+        </a>
+        <!-- Title -->
+        <span class="title">SODA.CI</span>
+        <!-- Cart -->
+        <nav class="cart">
+            <a href="{% url 'cart:cart' %}">
+                <img src="{% static "assets/images/cart_2.svg" %}" width="40" height="40" alt="Cart">
+            </a>
+        </nav>
+    </div>
+</header>

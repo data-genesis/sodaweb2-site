@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/order_form.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="order-form-container">
+    <form id="order-form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/order.js' %}"></script>
+{% endblock %}
