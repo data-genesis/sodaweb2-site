@@ -35,15 +35,3 @@
     font-size: 1em; /* Установите размер иконки */
     color: black; /* Цвет иконки */
 }
-
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    #footer .inner {
-        padding: 10px;
-    }
-
-    #footer p {
-        font-size: 0.8em;
-    }
-}

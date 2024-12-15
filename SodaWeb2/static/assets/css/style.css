@@ -1,10 +1,29 @@
 /* Общие стили */
 
 @font-face {
-    font-family: 'Source Code Pro';
+    font-family: 'DEFAULT';
     src: url('/static/assets/fonts/SourceCodePro-ExtraLight.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'BOLD';
+    src: url('/static/assets/fonts/SourceCodePro-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TITLE';
+    src: url('/static/assets/fonts/IntroFriday.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    overflow-x: hidden;
 }
 
 body {
@@ -40,8 +59,31 @@ body {
 }
 
 /* Адаптивность */
-@media (max-width: 768px) {
-    .inner {
-        padding: 10px;
+/*@media (max-width: 768px) {*/
+/*    header {*/
+/*        width: 320px !important;*/
+/*    }*/
+/*    .item-grid-container {*/
+/*        max-width: 320px !important;*/
+/*    }*/
+/*    .inner {*/
+/*        padding: 10px;*/
+/*    }*/
+/*}*/
+
+@media (min-width: 320px) {
+    .item-grid-container {
+        height: 50em;
     }
+    .item-grid {
+        height: 20em !important;
+    }
+    .item-description, .item-images {
+        height: 30em !important;
+    }
+    .item-description p {
+        font-size: 11px !important;
+    }
+
+
 }
